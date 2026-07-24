@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Reachable by link, not by search. Remove this (and robots.txt in build.py) to be indexable. -->
+<meta name="robots" content="noindex, nofollow">
+<title>Alex Valdetaro — Resume</title>
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --muted:#555;
+    --accent:#0b6ea8;
+    --rule:#d8d8d8;
+    --bg:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Georgia","Times New Roman",serif;
+    color:var(--ink);
+    background:#ececec;
+    line-height:1.4;
+    font-size:14px;
+  }
+  .page{
+    max-width:8.5in;
+    margin:24px auto;
+    background:var(--bg);
+    padding:0.6in 0.7in;
+    box-shadow:0 2px 14px rgba(0,0,0,.15);
+  }
+  header{
+    border-bottom:2px solid var(--ink);
+    padding-bottom:10px;
+    margin-bottom:16px;
+  }
+  h1{
+    font-size:28px;
+    letter-spacing:.5px;
+    margin:0 0 4px;
+    font-weight:700;
+  }
+  .contact{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:11.5px;
+    color:var(--muted);
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px 14px;
+  }
+  .contact span{white-space:nowrap;}
+  h2{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12.5px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:var(--accent);
+    border-bottom:1px solid var(--rule);
+    padding-bottom:3px;
+    margin:20px 0 10px;
+  }
+  .job{margin-bottom:14px;}
+  .job-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:12px;
+    margin-bottom:2px;
+  }
+  .role{font-weight:700;font-size:15px;}
+  .company{font-weight:700;}
+  .org{color:var(--muted);font-style:italic;font-size:13px;}
+  .dates{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:11px;
+    color:var(--muted);
+    white-space:nowrap;
+  }
+  ul{margin:5px 0 0;padding-left:18px;}
+  li{margin-bottom:3.5px;}
+  li strong{color:var(--ink);}
+  .metric{color:var(--accent);font-weight:700;}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2px 28px;}
+  .edu-item, .pub-item{margin-bottom:6px;font-size:13px;}
+  .edu-item .dates, .pub-item .venue{display:block;}
+  .pub-list{padding-left:0;list-style:none;margin-top:6px;}
+  .pub-list li{font-size:12px;color:var(--muted);margin-bottom:4px;}
+  .pub-list .ptitle{color:var(--ink);}
+  .summary{font-size:13.5px;color:#333;margin:0 0 4px;}
+  .scope{font-size:12.5px;color:var(--muted);font-style:italic;margin:3px 0 0;}
+  .skills{font-size:12.5px;color:#333;margin:0;}
+  .skills strong{color:var(--ink);}
+  @media print{
+    body{background:#fff;font-size:10.4px;line-height:1.34;}
+    .page{margin:0;box-shadow:none;max-width:none;padding:0.32in 0.5in;}
+    h1{font-size:24px;}
+    h2{margin:11px 0 5px;}
+    .job{margin-bottom:9px;}
+    li{margin-bottom:2px;}
+    .pub-list li{margin-bottom:1.5px;}
+    .edu-item{margin-bottom:3px;}
+    .summary{margin-bottom:0;}
+    a{color:var(--ink);text-decoration:none;}
+  }
+  a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Alex Valdetaro</h1>
+    <div class="contact">
+      <span>New York, NY</span>
+    </div>
+  </header>
+
+  <p class="summary">
+    Engineer and tech lead. Eight years on Snap Maps — led the Android team, owned the
+    device-location platform behind 120M DAU, and set the team's bar for performance, crashes,
+    and code quality. Before that, three years at Facebook across web, backend pipelines, and
+    search ranking. Strongest on the ambiguous systems problems nobody else wants: startup
+    performance, background location, platform architecture.
+  </p>
+
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-head">
+      <div><span class="company">Snap</span> &nbsp;<span class="org">Staff Software Engineer &amp; Tech Lead, Maps &amp; Location</span></div>
+      <span class="dates">2017 – 2025 · Remote</span>
+    </div>
+    <p class="scope">Tech lead for the Maps Android team (6 engineers). Owned the team's quality bar,
+      technical direction, and product backlog; escalation point for every metric regression, crash,
+      and ANR on Maps.</p>
+    <ul>
+      <li>Fixed the startup jank blocking Map's swipe animation, unblocking Map's launch as a top-level Snapchat tab (<span class="metric">~2x Map DAU</span>); the perf work itself cut map render time <span class="metric">7%</span> and friend-load time <span class="metric">14%</span>.</li>
+      <li>Owned the Device Location platform (<span class="metric">120M DAU</span>) powering Live Location (<span class="metric">20M DAU</span>) — attributed location APIs consumed by teams across the app. Coverage <span class="metric">+42%</span>, push-to-location round trip <span class="metric">−33%</span>, upload success <span class="metric">+15%</span>.</li>
+      <li>Rebuilt background location on Android as the app's first out-of-process service; built a standalone app and backend to trial approaches against real field data rather than guessing, and took it to production A/B.</li>
+      <li>Owned Promoted Places (Maps ads) on Android end-to-end, from designs with the ads teams through shipping ad-tracking signal bridging from the Map SDK; separately unblocked a stalled location-upload redesign that drove significant monetization gains.</li>
+      <li>Built the "Layers" declarative rendering engine for the Map — Memories, Inline Playback, and the Ticketmaster integration all shipped on it; led the Maps codebase from monolithic Java to modular Kotlin (Dagger, Rx).</li>
+      <li>Ran the Android team while the manager was on leave — 1-on-1s, unblocking, triage of bugs and perf regressions, and quarterly product planning — on top of the tech-lead and IC load.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div><span class="company">Meta</span> &nbsp;<span class="org">Senior Software Engineer</span></div>
+      <span class="dates">2014 – 2017 · New York, NY</span>
+    </div>
+    <ul>
+      <li>Refactored the scheduled-posts pipeline — made the async job idempotent and reorganized
+        error handling and notifications, reducing errors by <span class="metric">50%</span>.</li>
+      <li>Shipped messaging features into Facebook's search-ranking algorithm (CTR <span class="metric">+0.5%</span>)
+        and Page Private Replies (<span class="metric">+3%</span> core metrics).</li>
+      <li>Built Pages Commerce admin tools for web desktop and mobile, improved News Feed distribution
+        of shops and products through A/B testing, and shipped response indicators for Pages messaging
+        (<span class="metric">+5%</span> core metrics).</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div><span class="company">Tecgraf Institute</span> &nbsp;<span class="org">Software Engineer &amp; Graphics Researcher</span></div>
+      <span class="dates">2009 – 2013 · Rio de Janeiro, BR</span>
+    </div>
+    <ul>
+      <li>Built a distributed rendering system that serializes the scene and keeps frame/clock sync
+        across machines, removing a bottleneck in rendering to multiple screens from a single machine.</li>
+      <li>Designed a novel algorithm for generating cylinder meshes from point lists in the GPU
+        tessellator pipeline, eliminating the need for designer input; implemented Screen Space
+        Ambient Occlusion and scalable terrain rendering on the GPU.</li>
+    </ul>
+  </div>
+
+  <h2>Skills</h2>
+  <p class="skills">
+    <strong>Android</strong> Kotlin, Java, Dagger, RxJava ·
+    <strong>Performance</strong> tracing, startup optimization, crash/ANR/leak debugging, A/B experimentation ·
+    <strong>Platform</strong> SDK &amp; API design, location services, out-of-process services ·
+    <strong>Also</strong> C++, GPU/graphics, backend pipelines, web
+  </p>
+
+  <h2>Education</h2>
+  <div class="two-col">
+    <div class="edu-item">
+      <strong>M.Sc. Informatics</strong> — Computer Graphics<br>
+      <span class="org">Pontifical Catholic University of Rio de Janeiro</span>
+      <span class="dates">2011 – 2013</span>
+    </div>
+    <div class="edu-item">
+      <strong>B.Sc. Computer Engineering</strong><br>
+      <span class="org">Pontifical Catholic University of Rio de Janeiro</span>
+      <span class="dates">2005 – 2010</span>
+    </div>
+  </div>
+  <div class="edu-item">Organized and taught an 8-month game-development course (C++, DirectX, CG)
+    — Technology &amp; Training, 2011.</div>
+
+  <h2>Selected Publications</h2>
+  <ul class="pub-list">
+    <li><span class="ptitle">Rendering Tubes from Discrete Curves Using Hardware Tessellation</span> — JGT, 2012. G. Nunes, A. Valdetaro, A. Raposo, B. Feijó.</li>
+    <li><span class="ptitle">LOD Terrain Rendering by Local Parallel Processing on GPU</span> — SBGames, 2010. A. Valdetaro, G. Nunes, A. Raposo.</li>
+  </ul>
+
+</div>
+</body>
+</html>
